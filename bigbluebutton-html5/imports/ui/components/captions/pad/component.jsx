@@ -151,12 +151,13 @@ class Pad extends PureComponent {
         }
 
         const newEntry = finalTranscript !== '';
-
+console.log('final transcript: ');
+console.log(finalTranscript);
         // Changes to the finalTranscript are shown to in the captions
         if (newEntry) {
           const text = finalTranscript.trimRight();
-console.log(text);
-console.log(locale);
+console.log('Text: '+text);
+console.log('Local: '+locale);
           CaptionsService.appendText(text, locale);
           finalTranscript = '';
         }
